@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Providers } from './providers';
 import { DevPanel } from '@/components/dev-panel';
+import React from "react";
 
 export const metadata: Metadata = {
   title: 'Forge Node',
@@ -14,12 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const isDev = process.env.NODE_ENV === 'development';
-  
+
   return (
     <html lang="ru">
       <body className="antialiased">
         <Providers>
-          {isDev && <DevPanel />}
+          {/*{isDev && <DevPanel />}*/}
           {children}
         </Providers>
       </body>
